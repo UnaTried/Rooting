@@ -58,6 +58,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd MMRL
+          echo $PWD
           mmrl-util sync --diff versions_diff.md
 
       - name: Write versions diff to summary
