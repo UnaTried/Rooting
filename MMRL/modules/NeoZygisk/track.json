@@ -1,5 +1,5 @@
 {
-	"id": "zygisksu",
+	"id": "NeoZygisk",
 	"enable": true,
 	"source": "https://github.com/JingMatrix/NeoZygisk",
 	"update_to": "https://raw.githubusercontent.com/JingMatrix/NeoZygisk/master/module/zygisk.json",
