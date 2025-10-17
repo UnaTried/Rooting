@@ -58,13 +58,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd MMRL
-          echo $PWD
           mmrl-util sync --diff versions_diff.md
 
       - name: Write versions diff to summary
         if: ${{ env.IS_SYNC == 'true' }}
         run: |
-          echo $PWD
           if [ -f versions_diff.md ]; then
             echo "## Versions Diff" >> $GITHUB_STEP_SUMMARY
             echo "$(cat versions_diff.md)" >> $GITHUB_STEP_SUMMARY
@@ -82,6 +80,7 @@ jobs:
       - name: Index and Push
         if: ${{ env.IS_SYNC == 'true' }}
         run: |
+          cd MMRL
           mmrl-util index --push
 
       - name: Upload logs
