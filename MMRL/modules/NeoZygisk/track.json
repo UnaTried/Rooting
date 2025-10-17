@@ -1,0 +1,48 @@
+{
+	"id": "zygisksu",
+	"enable": true,
+	"source": "https://github.com/JingMatrix/NeoZygisk",
+	"update_to": "https://raw.githubusercontent.com/JingMatrix/NeoZygisk/master/module/zygisk.json",
+	"license": "GPL-3.0",
+	"homepage": "https://github.com/JingMatrix/NeoZygisk",
+	"verified": true,
+	"support": "https://github.com/JingMatrix/NeoZygisk/issues",
+	"donate": "https://github.com/sponsors/JingMatrix",
+	"max_num": 100,
+	"maxApi": 30,
+	"minApi": 21,
+	"categories": [
+		"Configurable",
+		"Tweaks and Hacks",
+		"Miscellaneous"
+	],
+	"readme": "https://github.com/JingMatrix/NeoZygisk/blob/master/README.md",
+	"note": {
+		"color": "red",
+		"title": "idk",
+		"message": "idk"
+	},
+	"features": {
+		"service": true,
+		"post_fs_data": true,
+		"resetprop": true,
+		"sepolicy": true,
+		"zygisk": true,
+		"apks": true,
+		"webroot": true,
+		"post_mount": true,
+		"boot_completed": true,
+		"modconf": true
+	},
+	"manager": {
+		"magisk": { "min": 25200, "require": [ "module1" ]},
+		"kernelsu": { "min": 10000, "require": [ "module2" ]}
+	},
+	"antifeatures": [
+	  	"feature1",
+  		"feature2"
+	],
+	"options": {
+		"disableRemoteMetadata": true
+	}
+}
