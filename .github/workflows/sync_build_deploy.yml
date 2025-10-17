@@ -49,7 +49,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd MMRL
           python -m pip install --upgrade pip
           pip install mmrl-util
 
@@ -58,11 +57,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          cd MMRL
           mmrl-util sync --diff versions_diff.md
 
       - name: Write versions diff to summary
         if: ${{ env.IS_SYNC == 'true' }}
         run: |
+          echo $PWD
           if [ -f versions_diff.md ]; then
             echo "## Versions Diff" >> $GITHUB_STEP_SUMMARY
             echo "$(cat versions_diff.md)" >> $GITHUB_STEP_SUMMARY
@@ -86,7 +87,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: logs
-          path: log/*.log
+          path: MMRL/log/*.log
   
   build:
     runs-on: ubuntu-latest
