@@ -1,8 +1,9 @@
-name: sync-mmrl-submodule
+name: Sync MMRL submodule commit on main branch
 on:
+  workflow_dispatch:
   push:
-    branches:
-      - MMRL
+    paths:
+      - ".github/workflows/sync_build_deploy.yml"
 jobs:
   Sync:
     runs-on: ubuntu-latest
