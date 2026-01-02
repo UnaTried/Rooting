@@ -1,13 +1,12 @@
 {
-  "id": "try",
-  "name": "TryRooting",
-  "base_url": "https://unatried.github.io/Rooting/MMRL/",
-  "website": "https://rooting.unatried.com/MMRL",
-  "support": "https://github.com/unatried/Rooting/issues",
-  "donate": null,
-  "submission": "https://github.com/unatried/Rooting/pull",
-  "description": "A list of modules and application UnaTried might be using.",
-  "max_num": 100,
-  "enable_log": true,
-  "log_dir": "log"
+    "id": "skrullex",
+    "name": "Skrullex",
+    "base_url": "https://rooting.unatried.com/MMRL/",
+    "website": "https://rooting.unatried.com/MMRL",
+    "support": "https://github.com/unatried/Rooting/issues",
+    "donate": null,
+    "submission": "https://github.com/unatried/Rooting/pull",
+    "description": "A list of modules and application UnaTried might be using.",
+    "max_num": 100,
+    "enable_log": false
 }
