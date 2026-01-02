@@ -1,6 +1,6 @@
 {
   "id": "rooatrMRL",
-  "name": "Skrullex",
+  "name": "Skrull",
   "website": "https://rooting.unatried.com/MMRL",
   "support": "https://github.com/unatried/Rooting/issues",
   "donate": null,
@@ -9,7 +9,7 @@
   "description": "A list of modules and application UnaTried might be using.",
   "metadata": {
     "version": 1,
-    "timestamp": 1767391666.781321
+    "timestamp": 1767392114.637733
   },
   "modules": [
     {
