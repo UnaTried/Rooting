@@ -8,12 +8,23 @@ jobs:
   Sync:
     runs-on: ubuntu-latest
     steps:
+      # Checkout main repo
       - uses: actions/checkout@v4
         with:
-            submodules: recursive
-            token: ${{ secrets.GITHUB_TOKEN }}
-      - run: git submodule update --remote MMRL
+          token: ${{ secrets.GITHUB_TOKEN }}
+          submodules: false  # we’ll handle submodules manually
+
+      # Initialize the submodule with the correct branch
       - run: |
-              git add MMRL
-              git commit -m "Sync MMRL submodule" || exit 0
-              git push origin main
+          git submodule init MMRL
+          git submodule update --remote --checkout -- MMRL
+          cd MMRL
+          git fetch origin MMRL:MMRL  # fetch the branch explicitly
+          git checkout MMRL
+          cd ..
+
+      # Commit and push any updated submodule
+      - run: |
+          git add MMRL
+          git commit -m "Sync MMRL submodule" || echo "No changes to commit"
+          git push origin main
