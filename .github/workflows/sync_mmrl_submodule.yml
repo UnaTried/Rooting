@@ -8,13 +8,12 @@ jobs:
   Sync:
     runs-on: ubuntu-latest
     steps:
-      # Checkout main repo
-      - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          submodules: false  # we’ll handle submodules manually
-
-      # Initialize the submodule with the correct branch
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Configure git
+        run: |
+          git config user.name "UnaTried"
+          git config user.email "uccchipofya@gmail.com"
       - run: |
           git submodule init MMRL
           git submodule update --remote --checkout -- MMRL
@@ -22,9 +21,12 @@ jobs:
           git fetch origin MMRL:MMRL  # fetch the branch explicitly
           git checkout MMRL
           cd ..
-
-      # Commit and push any updated submodule
       - run: |
           git add MMRL
           git commit -m "Sync MMRL submodule" || echo "No changes to commit"
-          git push origin main
+          git pull --rebase origin main || echo "No remote changes to rebase"
+      - name: Push all commits
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
