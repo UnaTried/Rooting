@@ -1,4 +1,4 @@
 [submodule "MMRL"]
 	path = MMRL
-	url = https://github.com/UnaTried/Rooting
+	url = ../
 	branch = MMRL
