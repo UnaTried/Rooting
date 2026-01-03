@@ -3,7 +3,6 @@ antifeatures:
 - Tracking
 - NonFreeNet
 - NonFreeDep
-- NSFW
 - UpstreamNonFree
 - NonFreeAssets
 - KnownVuln
