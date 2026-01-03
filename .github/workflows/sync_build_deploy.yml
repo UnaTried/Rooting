@@ -1,4 +1,4 @@
-name: sync-build-deploy
+name: Sync all modules in the MMRL repo
 on:
   schedule:
     - cron: '0 */6 * * *'
