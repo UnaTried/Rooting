@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - ".github/workflows/sync_build_deploy.yml"
+permissions:
+  contents: write
 jobs:
   Sync:
     runs-on: ubuntu-latest
