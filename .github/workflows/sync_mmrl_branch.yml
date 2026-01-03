@@ -2,8 +2,8 @@ name: Sync MMRL branch commit on main branch
 on:
   workflow_dispatch:
   push:
-    paths:
-      - ".github/workflows/sync_build_deploy.yml"
+    branches:
+      - MMRL
 permissions:
   contents: write
 jobs:
