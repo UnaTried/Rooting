@@ -19,6 +19,7 @@ jobs:
       - run: |
           rm -rf MMRL
           git clone https://github.com/UnaTried/Rooting/ -b MMRL MMRL
+          rm -rf MMRL/.git
       - run: |
           git add MMRL
           git commit -m "Sync MMRL branch" || echo "No changes to commit"
