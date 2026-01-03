@@ -1,4 +1,4 @@
-name: Sync MMRL submodule commit on main branch
+name: Sync MMRL branch commit on main branch
 on:
   workflow_dispatch:
   push:
@@ -12,20 +12,15 @@ jobs:
         uses: actions/checkout@v4
         with:
             token: ${{ secrets.GITHUB_TOKEN }}
-            submodules: recursive
       - name: Configure git
         run: |
           git config user.name "UnaTried"
           git config user.email "uccchipofya@gmail.com"
       - run: |
-          git submodule init MMRL
-          git submodule update --remote --checkout -- MMRL
-          cd MMRL
-          git fetch origin MMRL:MMRL  # fetch the branch explicitly
-          git checkout MMRL
-          cd ..
+          rm -rf MMRL
+          git clone https://github.com/UnaTried/Rooting/ -b MMRL MMRL
       - run: |
           git add MMRL
-          git commit -m "Sync MMRL submodule" || echo "No changes to commit"
+          git commit -m "Sync MMRL branch" || echo "No changes to commit"
           git pull --rebase origin main || echo "No remote changes to rebase"
           git push origin main
