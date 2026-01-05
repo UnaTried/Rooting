@@ -5,6 +5,7 @@ antifeatures:
 - NonFreeDep
 - UpstreamNonFree
 - NonFreeAssets
+- NSFW
 - KnownVuln
 - NoSourceSince
 - Obfuscation
