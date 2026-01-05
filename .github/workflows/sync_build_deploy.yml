@@ -81,7 +81,7 @@ jobs:
         if: ${{ env.IS_SYNC == 'true' }}
         run: |
           cd MMRL
-          mmrl-util index --push
+          mmrl-util index --push -b MMRL
 
       - name: Upload logs
         uses: actions/upload-artifact@v4
