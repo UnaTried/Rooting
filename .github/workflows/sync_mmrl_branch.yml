@@ -13,19 +13,19 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
+            ref: 'main'
             token: ${{ secrets.GITHUB_TOKEN }}
       - name: Configure git
         run: |
           git config user.name "UnaTried"
           git config user.email "uccchipofya@gmail.com"
       - run: |
-          git checkout main
           rm -rf MMRL
           mkdir MMRL
           git fetch origin MMRL
           git checkout origin/MMRL -- .
           mv ReadMe.md json modules MMRL/
-          git rm CNAME
+          git rm CNAME || echo "no CNAME file"
       - run: |
           git add MMRL
           git commit -m "Sync MMRL branch"
