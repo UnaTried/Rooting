@@ -28,5 +28,5 @@ jobs:
           git rm CNAME -f || echo "no CNAME file"
       - run: |
           git add MMRL
-          git commit -m "Sync MMRL branch"
+          git commit -m "Sync MMRL branch" || echo "No changes to commit"
           git push origin main
