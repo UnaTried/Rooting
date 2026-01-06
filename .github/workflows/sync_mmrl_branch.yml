@@ -20,10 +20,11 @@ jobs:
           git config user.email "uccchipofya@gmail.com"
       - run: |
           rm -rf MMRL
-          git clone https://github.com/UnaTried/Rooting/ -b MMRL MMRL
-          rm -rf MMRL/.git MMRL/.github MMRL/CNAME
+          mkdir MMRL
+          git fetch origin MMRL
+          git checkout origin/MMRL -- .
+          mv ReadMe.md json modules MMRL/
+          git rm CNAME
       - run: |
-          git add MMRL
-          git commit -m "Sync MMRL branch" || echo "No changes to commit"
-          git pull --rebase origin main || echo "No remote changes to rebase"
+          git commit -m "Sync MMRL branch"
           git push origin main
