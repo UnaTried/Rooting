@@ -1,0 +1,29 @@
+name: Sync MMRL branch commit on main branch
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - MMRL
+permissions:
+  contents: write
+jobs:
+  Sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+            token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Configure git
+        run: |
+          git config user.name "UnaTried"
+          git config user.email "uccchipofya@gmail.com"
+      - run: |
+          rm -rf MMRL
+          git clone https://github.com/UnaTried/Rooting/ -b MMRL MMRL
+          rm -rf MMRL/.git MMRL/.github MMRL/CNAME
+      - run: |
+          git add MMRL
+          git commit -m "Sync MMRL branch" || echo "No changes to commit"
+          git pull --rebase origin main || echo "No remote changes to rebase"
+          git push origin main
