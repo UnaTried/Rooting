@@ -25,7 +25,7 @@ jobs:
           git fetch origin MMRL
           git checkout origin/MMRL -- .
           mv ReadMe.md json modules MMRL/
-          git rm CNAME || echo "no CNAME file"
+          git rm CNAME -f || echo "no CNAME file"
       - run: |
           git add MMRL
           git commit -m "Sync MMRL branch"
