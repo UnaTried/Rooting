@@ -19,6 +19,7 @@ jobs:
           git config user.name "UnaTried"
           git config user.email "uccchipofya@gmail.com"
       - run: |
+          git checkout main
           rm -rf MMRL
           mkdir MMRL
           git fetch origin MMRL
@@ -26,5 +27,6 @@ jobs:
           mv ReadMe.md json modules MMRL/
           git rm CNAME
       - run: |
+          git add MMRL
           git commit -m "Sync MMRL branch"
           git push origin main
