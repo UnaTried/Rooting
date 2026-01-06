@@ -23,7 +23,7 @@ jobs:
           rm -rf MMRL
           mkdir MMRL
           git fetch origin MMRL
-          git checkout origin/MMRL
+          git checkout origin/MMRL -- .
           mv ReadMe.md json modules MMRL/
           git rm CNAME
       - run: |
