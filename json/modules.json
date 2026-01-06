@@ -1,0 +1,102 @@
+{
+  "id": "rooatrMRL",
+  "name": "Skrull",
+  "website": "https://rooting.unatried.com/MMRL",
+  "support": "https://github.com/unatried/Rooting/issues",
+  "donate": null,
+  "submission": "https://github.com/unatried/Rooting/pull",
+  "cover": null,
+  "description": "A list of modules and application UnaTried might be using.",
+  "metadata": {
+    "version": 1,
+    "timestamp": 1767392114.637733
+  },
+  "modules": [
+    {
+      "id": "NeoZygisk",
+      "name": "NeoZygisk",
+      "version": "v2.2 (266-559fc1d-release)",
+      "versionCode": 266,
+      "author": "JingMatrix",
+      "description": "Zygote injection with ptrace.",
+      "maxApi": 30,
+      "minApi": 21,
+      "categories": [
+        "Configurable",
+        "Tweaks and Hacks",
+        "Miscellaneous"
+      ],
+      "homepage": "https://github.com/JingMatrix/NeoZygisk",
+      "donate": "https://github.com/sponsors/JingMatrix",
+      "support": "https://github.com/JingMatrix/NeoZygisk/issues",
+      "license": "GPL-3.0",
+      "readme": "https://github.com/JingMatrix/NeoZygisk/blob/master/README.md",
+      "verified": true,
+      "note": {
+        "color": "red",
+        "message": "idk",
+        "title": "idk"
+      },
+      "features": {
+        "service": true,
+        "post_fs_data": true,
+        "sepolicy": true,
+        "action": true
+      },
+      "manager": {
+        "kernelsu": {
+          "min": 10000,
+          "require": [
+            "module2"
+          ]
+        },
+        "magisk": {
+          "min": 25200,
+          "require": [
+            "module1"
+          ]
+        }
+      },
+      "added": 0,
+      "timestamp": 1757862999.0,
+      "size": 3285848,
+      "permissions": [
+        "magisk.permission.SERVICE",
+        "magisk.permission.POST_FS_DATA",
+        "magisk.permission.SEPOLICY",
+        "magisk.permission.ACTION"
+      ],
+      "stars": 1287,
+      "track": {
+        "type": "ONLINE_JSON",
+        "added": null,
+        "source": "https://github.com/JingMatrix/NeoZygisk",
+        "antifeatures": [
+          "Ads",
+          "Tracking",
+          "NonFreeNet",
+          "NonFreeDep",
+          "NSFW",
+          "UpstreamNonFree",
+          "NonFreeAssets",
+          "KnownVuln",
+          "NoSourceSince",
+          "Obfuscation",
+          "UnaskedRemoval",
+          "LLM"
+        ],
+        "build_metadata": "https://rooting.unatried.com/MMRL/modules/NeoZygisk/track.yaml"
+      },
+      "versions": [
+        {
+          "timestamp": 1757862999.0,
+          "version": "v2.2 (266-559fc1d-release)",
+          "versionCode": 266,
+          "zipUrl": "https://rooting.unatried.com/MMRL/modules/NeoZygisk/v2.2_266-559fc1d-release.zip",
+          "changelog": "https://rooting.unatried.com/MMRL/modules/NeoZygisk/v2.2_266-559fc1d-release.md",
+          "size": 3285848
+        }
+      ]
+    }
+  ]
+}
