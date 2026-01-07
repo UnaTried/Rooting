@@ -39,9 +39,4 @@ jobs:
       - run: |
           git add MMRL
           git commit -m "Sync MMRL branch" || echo "No changes to commit"
-          git push origin main          git rm mmrl_repo
-
-      - run: |
-          git add MMRL
-          git commit -m "Sync MMRL branch" || echo "No changes to commit"
           git push origin main
