@@ -79,7 +79,6 @@ jobs:
       - name: Index and Push
         if: ${{ env.IS_SYNC == 'true' }}
         run: |
-          cd MMRL
           mmrl-util index --push --branch MMRL
 
       - name: Upload logs
@@ -87,7 +86,7 @@ jobs:
         with:
           name: logs
           path: MMRL/log/*.log
-  
+
   build:
     runs-on: ubuntu-latest
     needs: sync
@@ -95,17 +94,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref }}
-        
+          ref: 'MMRL'
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        
+
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
-          
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
