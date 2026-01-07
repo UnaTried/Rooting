@@ -34,7 +34,7 @@ jobs:
           rm -rf MMRL
           mkdir -p MMRL
           rsync -a --delete mmrl_repo/README.md mmrl_repo/json mmrl_repo/modules MMRL/
-          rm -rf mmrl_repo
+          git rm mmrl_repo
 
       - run: |
           git add MMRL
