@@ -25,11 +25,8 @@ jobs:
           git config user.email "uccchipofya@gmail.com"
       - run: |
           rm -rf MMRL
-          mkdir MMRL
-          git fetch origin MMRL
-          git checkout origin/MMRL -- .
-          mv ReadMe.md json modules MMRL/
-          git rm CNAME -f || echo "no CNAME file"
+          git worktree add MMRL origin/MMRL
+          git -C MMRL rm -f CNAME .github
       - run: |
           git add MMRL
           git commit -m "Sync MMRL branch" || echo "No changes to commit"
