@@ -9,9 +9,49 @@
   "description": "A list of modules and application UnaTried might be using.",
   "metadata": {
     "version": 1,
-    "timestamp": 1767392114.637733
+    "timestamp": 1767758123.057836
   },
   "modules": [
+    {
+      "id": "InfamickScript",
+      "name": "Infamick Script",
+      "version": "v3.3",
+      "versionCode": 202506121,
+      "author": "@Infamousmick",
+      "description": "A powerful system utility script for rooted Android devices",
+      "support": "https://github.com/Infamousmick/",
+      "homepage": "https://github.com/Infamousmick/Infamick-script",
+      "readme": "https://raw.githubusercontent.com/Infamousmick/Infamick-script/main/README.md",
+      "verified": false,
+      "added": 0,
+      "timestamp": 1749748742.0,
+      "size": 23487,
+      "permissions": [
+        "magisk.permission.SERVICE",
+        "magisk.permission.POST_FS_DATA"
+      ],
+      "features": {
+        "service": true,
+        "post_fs_data": true
+      },
+      "track": {
+        "type": "ONLINE_JSON",
+        "added": null,
+        "source": "https://github.com/Infamousmick/Infamick-script",
+        "antifeatures": null,
+        "build_metadata": "https://rooting.unatried.com/MMRL/modules/InfamickScript/track.yaml"
+      },
+      "versions": [
+        {
+          "timestamp": 1749748742.0,
+          "version": "v1.0.21",
+          "versionCode": 121,
+          "zipUrl": "https://rooting.unatried.com/MMRL/modules/InfamickScript/v1.0.21_121.zip",
+          "changelog": "https://rooting.unatried.com/MMRL/modules/InfamickScript/v1.0.21_121.md",
+          "size": 23487
+        }
+      ]
+    },
     {
       "id": "NeoZygisk",
       "name": "NeoZygisk",
@@ -19,46 +59,8 @@
       "versionCode": 266,
       "author": "JingMatrix",
       "description": "Zygote injection with ptrace.",
-      "maxApi": 30,
-      "minApi": 21,
-      "categories": [
-        "Configurable",
-        "Tweaks and Hacks",
-        "Miscellaneous"
-      ],
-      "homepage": "https://github.com/JingMatrix/NeoZygisk",
-      "donate": "https://github.com/sponsors/JingMatrix",
-      "support": "https://github.com/JingMatrix/NeoZygisk/issues",
-      "license": "GPL-3.0",
-      "readme": "https://github.com/JingMatrix/NeoZygisk/blob/master/README.md",
-      "verified": true,
-      "note": {
-        "color": "red",
-        "message": "idk",
-        "title": "idk"
-      },
-      "features": {
-        "service": true,
-        "post_fs_data": true,
-        "sepolicy": true,
-        "action": true
-      },
-      "manager": {
-        "kernelsu": {
-          "min": 10000,
-          "require": [
-            "module2"
-          ]
-        },
-        "magisk": {
-          "min": 25200,
-          "require": [
-            "module1"
-          ]
-        }
-      },
+      "verified": false,
       "added": 0,
-      "timestamp": 1757862999.0,
       "size": 3285848,
       "permissions": [
         "magisk.permission.SERVICE",
@@ -66,25 +68,17 @@
         "magisk.permission.SEPOLICY",
         "magisk.permission.ACTION"
       ],
-      "stars": 1287,
+      "features": {
+        "service": true,
+        "post_fs_data": true,
+        "sepolicy": true,
+        "action": true
+      },
       "track": {
         "type": "ONLINE_JSON",
         "added": null,
         "source": "https://github.com/JingMatrix/NeoZygisk",
-        "antifeatures": [
-          "Ads",
-          "Tracking",
-          "NonFreeNet",
-          "NonFreeDep",
-          "NSFW",
-          "UpstreamNonFree",
-          "NonFreeAssets",
-          "KnownVuln",
-          "NoSourceSince",
-          "Obfuscation",
-          "UnaskedRemoval",
-          "LLM"
-        ],
+        "antifeatures": null,
         "build_metadata": "https://rooting.unatried.com/MMRL/modules/NeoZygisk/track.yaml"
       },
       "versions": [
@@ -95,6 +89,79 @@
           "zipUrl": "https://rooting.unatried.com/MMRL/modules/NeoZygisk/v2.2_266-559fc1d-release.zip",
           "changelog": "https://rooting.unatried.com/MMRL/modules/NeoZygisk/v2.2_266-559fc1d-release.md",
           "size": 3285848
+        }
+      ]
+    },
+    {
+      "id": "TermuxRootMods",
+      "name": "Termux Root Modifications",
+      "version": "v1.0.21",
+      "versionCode": 121,
+      "author": "Rompelhd \ud83e\udd75",
+      "description": "Termux Root Modifications - The Way It Should Be",
+      "verified": false,
+      "added": 0,
+      "size": 312578,
+      "track": {
+        "type": "ONLINE_ZIP",
+        "added": null,
+        "source": "https://github.com/shomykohai/haruka",
+        "antifeatures": null,
+        "build_metadata": "https://rooting.unatried.com/MMRL/modules/TermuxRootMods/track.yaml"
+      },
+      "versions": [
+        {
+          "timestamp": 1754399292.0,
+          "version": "v0.3",
+          "versionCode": 1,
+          "zipUrl": "https://rooting.unatried.com/MMRL/modules/TermuxRootMods/v0.3_1.zip",
+          "changelog": "",
+          "size": 1682879
+        },
+        {
+          "timestamp": 1757117474.0,
+          "version": "v1.0.21",
+          "versionCode": 121,
+          "zipUrl": "https://rooting.unatried.com/MMRL/modules/TermuxRootMods/v1.0.21_121.zip",
+          "changelog": "https://rooting.unatried.com/MMRL/modules/TermuxRootMods/v1.0.21_121.md",
+          "size": 312578
+        }
+      ]
+    },
+    {
+      "id": "TermuxRootMods",
+      "name": "Termux Root Modifications",
+      "version": "v1.0.21",
+      "versionCode": 121,
+      "author": "Rompelhd \ud83e\udd75",
+      "description": "Termux Root Modifications - The Way It Should Be",
+      "verified": false,
+      "added": 0,
+      "timestamp": 1757117474.0,
+      "size": 312578,
+      "track": {
+        "type": "ONLINE_JSON",
+        "added": null,
+        "source": "https://github.com/rompelhd/TermuxRootMods",
+        "antifeatures": null,
+        "build_metadata": "https://rooting.unatried.com/MMRL/modules/TermuxRootMods/track.yaml"
+      },
+      "versions": [
+        {
+          "timestamp": 1754399292.0,
+          "version": "v0.3",
+          "versionCode": 1,
+          "zipUrl": "https://rooting.unatried.com/MMRL/modules/TermuxRootMods/v0.3_1.zip",
+          "changelog": "",
+          "size": 1682879
+        },
+        {
+          "timestamp": 1757117474.0,
+          "version": "v1.0.21",
+          "versionCode": 121,
+          "zipUrl": "https://rooting.unatried.com/MMRL/modules/TermuxRootMods/v1.0.21_121.zip",
+          "changelog": "https://rooting.unatried.com/MMRL/modules/TermuxRootMods/v1.0.21_121.md",
+          "size": 312578
         }
       ]
     }
