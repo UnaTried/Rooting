@@ -1,4 +1,0 @@
-enable: true
-id: TermuxRootMods
-source: https://github.com/rompelhd/TermuxRootMods
-update_to: https://raw.githubusercontent.com/rompelhd/TermuxRootMods/main/update.json

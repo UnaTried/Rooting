@@ -1,4 +1,0 @@
-enable: true
-id: NeoZygisk
-source: https://github.com/JingMatrix/NeoZygisk
-update_to: https://raw.githubusercontent.com/JingMatrix/NeoZygisk/master/module/zygisk.json
