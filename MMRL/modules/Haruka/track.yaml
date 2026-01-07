@@ -1,4 +1,0 @@
-enable: true
-id: TermuxRootMods
-source: https://github.com/shomykohai/haruka
-update_to: https://github.com/shomykohai/haruka/releases/download/v0.4/haruka.zip
