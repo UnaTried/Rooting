@@ -25,6 +25,7 @@ jobs:
           git config user.email "uccchipofya@gmail.com"
       - run: |
           rm -rf MMRL
+          git fetch origin MMRL
           git worktree add MMRL origin/MMRL
           git -C MMRL rm -f CNAME .github
       - run: |
