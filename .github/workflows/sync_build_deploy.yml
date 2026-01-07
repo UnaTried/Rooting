@@ -35,7 +35,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref }}
+          ref: 'MMRL'
 
       - name: Set up Git
         run: |
@@ -57,7 +57,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cd MMRL
           mmrl-util sync --diff versions_diff.md
 
       - name: Write versions diff to summary
