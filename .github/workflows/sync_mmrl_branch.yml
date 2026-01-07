@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - MMRL
+  workflow_run:
+    workflows: ["Sync all modules in the MMRL repo"]
+    types:
+      - completed
 permissions:
   contents: write
 jobs:
