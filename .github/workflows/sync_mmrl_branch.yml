@@ -28,13 +28,13 @@ jobs:
         with:
           ref: 'MMRL'
           token: ${{ secrets.GITHUB_TOKEN }}
-          path: mmrl_repo
+          path: 'mmrl_repo'
 
       - run: |
           rm -rf MMRL
           mkdir -p MMRL
           rsync -a --delete mmrl_repo/README.md mmrl_repo/json mmrl_repo/modules MMRL/
-          git rm mmrl_repo
+          rm -rf mmrl_repo
 
       - run: |
           git add MMRL
