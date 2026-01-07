@@ -33,6 +33,7 @@ jobs:
             modules
 
           mv ReadMe.md json modules MMRL/
+          rm -rf ReadMe.md json modules
 
       - run: |
           git add MMRL
