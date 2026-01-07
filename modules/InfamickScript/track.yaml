@@ -1,4 +1,4 @@
 enable: true
 id: InfamickScript
 source: https://github.com/Infamousmick/Infamick-script
-update_to: https://raw.githubusercontent.com/Infamousmick/Infamick-script/refs/heads/main/update.json
+update_to: https://raw.githubusercontent.com/Infamousmick/Infamick-script/main/update.json
