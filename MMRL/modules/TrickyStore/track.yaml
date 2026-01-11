@@ -1,4 +1,6 @@
 enable: true
 id: TrickyStore
+last_update: 1762077393.0
 source: https://github.com/5ec1cff/TrickyStore
 update_to: https://raw.githubusercontent.com/5ec1cff/TrickyStore/release/update.json
+versions: 1

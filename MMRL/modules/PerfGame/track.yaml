@@ -1,4 +1,6 @@
 enable: true
 id: PerfGame
+last_update: 1747059112.0
 source: https://github.com/adivenxnataly/PerfGame
 update_to: https://github.com/adivenxnataly/PerfGame/releases/download/2.0-release/PerfGamev2.0-release.zip
+versions: 1
