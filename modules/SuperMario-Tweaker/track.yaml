@@ -1,0 +1,4 @@
+enable: true
+id: SuperMario-Tweaker
+source: https://github.com/mrx7014/SuperMario-Tweaker
+update_to: https://github.com/mrx7014/SuperMario-Tweaker/master/update.json

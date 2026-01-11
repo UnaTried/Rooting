@@ -1,0 +1,4 @@
+enable: true
+id: PlayIntegrityFork 
+source: https://github.com/osm0sis/PlayIntegrityFork
+update_to: https://raw.githubusercontent.com/osm0sis/PlayIntegrityFork/main/update.json

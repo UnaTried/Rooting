@@ -1,0 +1,4 @@
+enable: true
+id: MAGNETAR
+source: https://github.com/Kyliekyler/MAGNETAR
+update_to: https://github.com/Kyliekyler/MAGNETAR/release/update.json

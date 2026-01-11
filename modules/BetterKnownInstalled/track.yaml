@@ -1,0 +1,4 @@
+enable: true
+id: BetterKnownInstalled
+source: https://github.com/Pixel-Props/BetterKnownInstalled
+update_to: https://github.com/Pixel-Props/BetterKnownInstalled.git

@@ -1,0 +1,4 @@
+enable: true
+id: playcurlNEXT
+source: https://github.com/daboynb/playcurlNEXT
+update_to: https://raw.githubusercontent.com/daboynb/playcurlNEXT/main/update.json
