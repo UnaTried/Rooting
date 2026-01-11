@@ -9,7 +9,7 @@
   "description": "A list of modules and application UnaTried might be using.",
   "metadata": {
     "version": 1,
-    "timestamp": 1768095474.842802
+    "timestamp": 1768096249.90758
   },
   "modules": [
     {
@@ -180,6 +180,35 @@
       ]
     },
     {
+      "id": "MAGNETAR",
+      "name": "MAGNETAR",
+      "version": "19.6.0 (YANKEE)",
+      "versionCode": 196000,
+      "author": "Kyliekyler",
+      "description": "Device Performance Optimizer \u2014 Aims To Provide An Optimal Experience At Every Usage Scenario",
+      "verified": false,
+      "added": 0,
+      "timestamp": 1756522107.0,
+      "size": 852186,
+      "track": {
+        "type": "ONLINE_JSON",
+        "added": null,
+        "source": "https://github.com/Kyliekyler/MAGNETAR",
+        "antifeatures": null,
+        "build_metadata": "https://rooting.unatried.com/MMRL/modules/MAGNETAR/track.yaml"
+      },
+      "versions": [
+        {
+          "timestamp": 1756522107.0,
+          "version": "19.6.0 (YANKEE)",
+          "versionCode": 196000,
+          "zipUrl": "https://rooting.unatried.com/MMRL/modules/MAGNETAR/19.6.0_YANKEE_196000.zip",
+          "changelog": "https://rooting.unatried.com/MMRL/modules/MAGNETAR/19.6.0_YANKEE_196000.md",
+          "size": 852186
+        }
+      ]
+    },
+    {
       "id": "NeoZygisk",
       "name": "NeoZygisk",
       "version": "v2.2 (266-559fc1d-release)",
@@ -328,6 +357,47 @@
       ]
     },
     {
+      "id": "SkySceneAddon",
+      "name": "SkyScene Add-on",
+      "version": "Linda (20220957) based on QTI V7.1",
+      "versionCode": 5,
+      "author": "Matt Yang (Fork: WeirdMidas)",
+      "description": "A memory management optimization module for legacy and modern devices, with compatibility between Android 8 and higher. Fork Repo: https://github.com/WeirdMidas/SkySceneAddon",
+      "verified": false,
+      "added": 0,
+      "timestamp": 1767913767.0,
+      "size": 3011087,
+      "permissions": [
+        "magisk.permission.SERVICE",
+        "magisk.permission.POST_FS_DATA",
+        "magisk.permission.RESETPROP",
+        "magisk.permission.SEPOLICY"
+      ],
+      "features": {
+        "service": true,
+        "post_fs_data": true,
+        "resetprop": true,
+        "sepolicy": true
+      },
+      "track": {
+        "type": "ONLINE_ZIP",
+        "added": null,
+        "source": "https://github.com/WeirdMidas/SkySceneAddon",
+        "antifeatures": null,
+        "build_metadata": "https://rooting.unatried.com/MMRL/modules/SkySceneAddon/track.yaml"
+      },
+      "versions": [
+        {
+          "timestamp": 1767913767.0,
+          "version": "Linda (20220957) based on QTI V7.1",
+          "versionCode": 5,
+          "zipUrl": "https://rooting.unatried.com/MMRL/modules/SkySceneAddon/Linda_20220957_based_on_QTI_V7.1.zip",
+          "changelog": "",
+          "size": 3011087
+        }
+      ]
+    },
+    {
       "id": "SpeedCool-Magisk-Module",
       "name": "SpeedCool",
       "version": "v2.3",
@@ -362,6 +432,45 @@
           "zipUrl": "https://rooting.unatried.com/MMRL/modules/SpeedCool-Magisk-Module/v2.3_14.zip",
           "changelog": "",
           "size": 19857
+        }
+      ]
+    },
+    {
+      "id": "SuperMario-Tweaker",
+      "name": "SuperMario Tweaker - Snapdradon",
+      "version": "v3.0.1",
+      "versionCode": 301,
+      "author": "MRX7014",
+      "description": "A tweaker module that can improve any device performance and stability (Gaming, Daily Useage, etc...)",
+      "verified": false,
+      "added": 0,
+      "timestamp": 1750455154.0,
+      "size": 3283646,
+      "permissions": [
+        "magisk.permission.SERVICE",
+        "magisk.permission.RESETPROP",
+        "magisk.permission.ACTION"
+      ],
+      "features": {
+        "service": true,
+        "resetprop": true,
+        "action": true
+      },
+      "track": {
+        "type": "ONLINE_JSON",
+        "added": null,
+        "source": "https://github.com/mrx7014/SuperMario-Tweaker",
+        "antifeatures": null,
+        "build_metadata": "https://rooting.unatried.com/MMRL/modules/SuperMario-Tweaker/track.yaml"
+      },
+      "versions": [
+        {
+          "timestamp": 1750455154.0,
+          "version": "v3.0.1",
+          "versionCode": 301,
+          "zipUrl": "https://rooting.unatried.com/MMRL/modules/SuperMario-Tweaker/v3.0.1_301.zip",
+          "changelog": "https://rooting.unatried.com/MMRL/modules/SuperMario-Tweaker/v3.0.1_301.md",
+          "size": 3283646
         }
       ]
     },
