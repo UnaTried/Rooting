@@ -9,9 +9,45 @@
   "description": "A list of modules and application UnaTried might be using.",
   "metadata": {
     "version": 1,
-    "timestamp": 1768070312.573495
+    "timestamp": 1768092879.52681
   },
   "modules": [
+    {
+      "id": "Haruka",
+      "name": "Haruka (Signature Spoofing)",
+      "version": "v0.3",
+      "versionCode": 1,
+      "author": "Shomy",
+      "description": "Add signature spoofing support on any rom systemlessly",
+      "verified": false,
+      "added": 0,
+      "timestamp": 1754399292.0,
+      "size": 1682879,
+      "permissions": [
+        "mmrl.permission.APKS",
+        "mmrl.permission.DEXS"
+      ],
+      "features": {
+        "apks": true
+      },
+      "track": {
+        "type": "ONLINE_ZIP",
+        "added": null,
+        "source": "https://github.com/shomykohai/haruka",
+        "antifeatures": null,
+        "build_metadata": "https://rooting.unatried.com/MMRL/modules/Haruka/track.yaml"
+      },
+      "versions": [
+        {
+          "timestamp": 1754399292.0,
+          "version": "v0.3",
+          "versionCode": 1,
+          "zipUrl": "https://rooting.unatried.com/MMRL/modules/Haruka/v0.3_1.zip",
+          "changelog": "",
+          "size": 1682879
+        }
+      ]
+    },
     {
       "id": "InfamickScript",
       "name": "Infamick Script",
@@ -97,42 +133,6 @@
           "zipUrl": "https://rooting.unatried.com/MMRL/modules/NeoZygisk/v2.2_266-559fc1d-release.zip",
           "changelog": "https://rooting.unatried.com/MMRL/modules/NeoZygisk/v2.2_266-559fc1d-release.md",
           "size": 3285848
-        }
-      ]
-    },
-    {
-      "id": "TermuxRootMods",
-      "name": "Termux Root Modifications",
-      "version": "v1.0.21",
-      "versionCode": 121,
-      "author": "Rompelhd \ud83e\udd75",
-      "description": "Termux Root Modifications - The Way It Should Be",
-      "verified": false,
-      "added": 0,
-      "size": 312578,
-      "track": {
-        "type": "ONLINE_ZIP",
-        "added": null,
-        "source": "https://github.com/shomykohai/haruka",
-        "antifeatures": null,
-        "build_metadata": "https://rooting.unatried.com/MMRL/modules/TermuxRootMods/track.yaml"
-      },
-      "versions": [
-        {
-          "timestamp": 1754399292.0,
-          "version": "v0.3",
-          "versionCode": 1,
-          "zipUrl": "https://rooting.unatried.com/MMRL/modules/TermuxRootMods/v0.3_1.zip",
-          "changelog": "",
-          "size": 1682879
-        },
-        {
-          "timestamp": 1757117474.0,
-          "version": "v1.0.21",
-          "versionCode": 121,
-          "zipUrl": "https://rooting.unatried.com/MMRL/modules/TermuxRootMods/v1.0.21_121.zip",
-          "changelog": "https://rooting.unatried.com/MMRL/modules/TermuxRootMods/v1.0.21_121.md",
-          "size": 312578
         }
       ]
     },
