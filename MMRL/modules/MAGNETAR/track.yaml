@@ -1,4 +1,6 @@
 enable: true
 id: MAGNETAR
+last_update: 1756522107.0
 source: https://github.com/Kyliekyler/MAGNETAR
 update_to: https://raw.githubusercontent.com/Kyliekyler/MAGNETAR/release/update.json
+versions: 1
