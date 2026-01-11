@@ -1,0 +1,4 @@
+enable: true
+id: TrickyStore
+source: https://github.com/5ec1cff/TrickyStore
+update_to: https://raw.githubusercontent.com/5ec1cff/TrickyStore/release/update.json

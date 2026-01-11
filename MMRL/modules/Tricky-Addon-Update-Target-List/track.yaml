@@ -1,0 +1,4 @@
+enable: true
+id: Tricky-Addon-Update-Target-List
+source: https://github.com/KOWX712/Tricky-Addon-Update-Target-List
+update_to: https://raw.githubusercontent.com/KOWX712/Tricky-Addon-Update-Target-List/main/update.json

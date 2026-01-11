@@ -1,0 +1,4 @@
+enable: true
+id: susfs4ksu-module
+source: https://github.com/sidex15/susfs4ksu-module
+update_to: https://raw.githubusercontent.com/sidex15/susfs4ksu-module/v1.5.2%2B/update.json

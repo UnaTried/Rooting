@@ -1,0 +1,4 @@
+enable: true
+id: encore
+source: https://github.com/Rem01Gaming/encore
+update_to: https://github.com/Rem01Gaming/encore/releases/download/4.6/encore-4.6-1080-2fa4940-release.zip

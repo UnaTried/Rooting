@@ -1,0 +1,4 @@
+enable: true
+id: ThemedProject
+source: https://github.com/Magisk-Modules-Alt-Repo/ThemedProject
+update_to: https://github.com/Magisk-Modules-Alt-Repo/ThemedProject.git
