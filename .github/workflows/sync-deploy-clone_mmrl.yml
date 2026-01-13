@@ -27,15 +27,12 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
-env:
-  IS_SYNC: ${{ inputs.run_sync == 'Yes' || github.event_name == 'schedule' }}
-
 jobs:
 # -------------------------------------------------
-# 1️⃣ SYNC (only runs when IS_SYNC == true)
+# 1️⃣ SYNC (only when requested)
 # -------------------------------------------------
   sync:
-    if: ${{ env.IS_SYNC }}
+    if: ${{ inputs.run_sync == 'Yes' || github.event_name == 'schedule' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -87,7 +84,7 @@ jobs:
 # 2️⃣ DEPLOY (only if sync ran)
 # -------------------------------------------------
   deploy:
-    if: ${{ env.IS_SYNC }}
+    if: ${{ inputs.run_sync == 'Yes' || github.event_name == 'schedule' }}
     needs: sync
     runs-on: ubuntu-latest
 
@@ -160,20 +157,3 @@ jobs:
           git add MMRL
           git commit -m "Sync MMRL branch" || echo "No changes to commit"
           git push origin main
-        with:
-          source: ./
-          destination: ./_site
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
