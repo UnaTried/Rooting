@@ -4,15 +4,15 @@ on:
     - cron: '0 */6 * * *'
 
   workflow_dispatch:
-   inputs:
+    inputs:
       run_sync:
         description: "Run Sync"
         type: choice
         required: true
         default: 'No'
         options:
-         - 'Yes'
-         - 'No'
+          - 'Yes'
+          - 'No'
 
 permissions:
   contents: write
