@@ -52,6 +52,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install mmrl-util
 
+      - name: Ensure clean MMRL branch
+        if: ${{ env.IS_SYNC == 'true' }}
+        run: |
+          git fetch origin MMRL
+          git checkout MMRL
+          git reset --hard origin/MMRL
+
+
       - name: Sync
         if: ${{ env.IS_SYNC == 'true' }}
         env:
