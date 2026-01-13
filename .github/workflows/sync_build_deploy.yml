@@ -75,11 +75,17 @@ jobs:
           echo "## Latest Versions" >> $GITHUB_STEP_SUMMARY
           echo "$(cat latest_versions.md)" >> $GITHUB_STEP_SUMMARY
           rm latest_versions.md
+          
+      - name: Pull latest MMRL
+        if: ${{ env.IS_SYNC == 'true' }}
+        run: |
+          git pull origin MMRL --rebase
+
+
 
       - name: Index and Push
         if: ${{ env.IS_SYNC == 'true' }}
         run: |
-          git pull --rebase
           mmrl-util index --push --branch MMRL
 
       - name: Upload logs
