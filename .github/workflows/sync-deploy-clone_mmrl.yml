@@ -13,7 +13,7 @@ on:
         description: "Run Sync"
         type: choice
         required: true
-        default: 'No'
+        default: 'Yes'
         options:
           - 'Yes'
           - 'No'
@@ -86,7 +86,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mmrl-util index --push
+          mmrl-util index --push --branch MMRL
 
       - name: Upload logs
         uses: actions/upload-artifact@v4
