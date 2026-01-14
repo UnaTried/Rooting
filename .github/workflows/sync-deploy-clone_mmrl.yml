@@ -46,6 +46,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Set up Git
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -56,7 +61,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install mmrl-util
 
-      - name: Sync modules
+      - name: Sync
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -66,22 +71,28 @@ jobs:
         run: |
           if [ -f versions_diff.md ]; then
             echo "## Versions Diff" >> $GITHUB_STEP_SUMMARY
-            cat versions_diff.md >> $GITHUB_STEP_SUMMARY
+            echo "$(cat versions_diff.md)" >> $GITHUB_STEP_SUMMARY
             rm versions_diff.md
           fi
+          
+      - name: Write latest versions to summary
+        run: |
+          mmrl-util index --list > latest_versions.md
+          echo "## Latest Versions" >> $GITHUB_STEP_SUMMARY
+          echo "$(cat latest_versions.md)" >> $GITHUB_STEP_SUMMARY
+          rm latest_versions.md
 
       - name: Index and Push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --global pull.rebase true
-          git config --global rebase.autoStash true
-          git pull origin MMRL
-          mmrl-util index --push --branch MMRL
+          mmrl-util index --push
 
       - name: Upload logs
         uses: actions/upload-artifact@v4
         with:
           name: logs
-          path: MMRL/log/*.log
+          path: log/*.log
 
 # -------------------------------------------------
 # 2️⃣ DEPLOY (only if sync ran)
