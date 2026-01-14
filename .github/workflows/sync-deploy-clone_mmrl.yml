@@ -72,8 +72,7 @@ jobs:
 
       - name: Index and Push
         run: |
-          git fetch origin MMRL
-          git merge origim MMRL
+          git pull origin MMRL
           mmrl-util index --push --branch MMRL
 
       - name: Upload logs
