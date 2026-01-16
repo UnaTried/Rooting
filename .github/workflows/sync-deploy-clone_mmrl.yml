@@ -41,6 +41,7 @@ jobs:
         with:
           ref: MMRL
           fetch-depth: 0
+          persist-credentials: true
 
       - name: Configure Git
         run: |
@@ -151,6 +152,7 @@ jobs:
           ref: MMRL
           token: ${{ secrets.GITHUB_TOKEN }}
           path: mmrl_repo
+          persist-credentials: true
 
       - name: Sync MMRL content into main
         run: |
