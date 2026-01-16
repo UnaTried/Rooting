@@ -83,7 +83,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mmrl-util index --push --branch MMRL
+          mmrl-util index --push --branch MMRL || echo "No changes to push"
+
 
       - name: Upload logs
         uses: actions/upload-artifact@v4
@@ -153,7 +154,7 @@ jobs:
           ref: MMRL
           token: ${{ secrets.GITHUB_TOKEN }}
           path: mmrl_repo
-          persist-credentials: true
+          persist-credentials: false
 
       - name: Sync MMRL content into main
         run: |
