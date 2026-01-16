@@ -86,6 +86,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          git fetch origin MMRL
+          git log --oneline --decorate --graph --all | head
           mmrl-util index --push --branch MMRL
 
       - name: Upload logs
