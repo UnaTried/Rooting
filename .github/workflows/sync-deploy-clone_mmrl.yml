@@ -142,8 +142,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config user.name "UnaTried"
-          git config user.email "uccchipofya@gmail.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Checkout MMRL branch to temp folder
         uses: actions/checkout@v4
