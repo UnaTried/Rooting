@@ -32,9 +32,146 @@ jobs:
 # 1️⃣ SYNC (only when requested)
 # -------------------------------------------------
   sync:
-    if: ${{ inputs.run_sync == 'Yes' || github.event_name == 'schedule' }}
+    if: ${{ (inputs.run_sync == 'Yes' || github.event_name == 'schedule') && github.event_name != 'push' }}
     runs-on: ubuntu-latest
 
+    steps:
+      - name: Checkout MMRL branch
+        uses: actions/checkout@v4
+        with:
+          ref: MMRL
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Set up Git
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install mmrl-util
+
+      - name: Sync
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mmrl-util sync --diff versions_diff.md
+
+      - name: Write versions diff to summary
+        run: |
+          if [ -f versions_diff.md ]; then
+            echo "## Versions Diff" >> $GITHUB_STEP_SUMMARY
+            echo "$(cat versions_diff.md)" >> $GITHUB_STEP_SUMMARY
+            rm versions_diff.md
+          fi
+          
+      - name: Write latest versions to summary
+        run: |
+          mmrl-util index --list > latest_versions.md
+          echo "## Latest Versions" >> $GITHUB_STEP_SUMMARY
+          echo "$(cat latest_versions.md)" >> $GITHUB_STEP_SUMMARY
+          rm latest_versions.md
+
+      - name: Index and Push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mmrl-util index --push --branch MMRL
+
+      - name: Upload logs
+        uses: actions/upload-artifact@v4
+        with:
+          name: logs
+          path: log/*.log
+
+# -------------------------------------------------
+# 2️⃣ DEPLOY (only if sync ran)
+# -------------------------------------------------
+  deploy:
+    
+    if: ${{ (inputs.run_sync == 'Yes' || github.event_name == 'schedule') && github.event_name != 'push' }}
+    needs: sync
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout MMRL branch
+        uses: actions/checkout@v4
+        with:
+          ref: MMRL
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+# -------------------------------------------------
+# 3️⃣ CLONE (always runs)
+# -------------------------------------------------
+  clone:
+    needs: [sync, deploy]
+    if: always()
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure Git
+        run: |
+          git config user.name "UnaTried"
+          git config user.email "uccchipofya@gmail.com"
+
+      - name: Checkout MMRL branch to temp folder
+        uses: actions/checkout@v4
+        with:
+          ref: MMRL
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: mmrl_repo
+
+      - name: Sync MMRL content into main
+        run: |
+          rm -rf MMRL
+          mkdir -p MMRL
+          rsync -a --delete \
+            mmrl_repo/README.md \
+            mmrl_repo/json \
+            mmrl_repo/modules \
+            MMRL/
+          rm -rf mmrl_repo
+
+      - name: Commit and push
+        run: |
+          git add MMRL
+          git commit -m "Sync MMRL branch" || echo "No changes to commit"
+          git push origin main
     steps:
       - name: Checkout MMRL branch
         uses: actions/checkout@v4
