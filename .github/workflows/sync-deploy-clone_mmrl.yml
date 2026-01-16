@@ -32,7 +32,7 @@ jobs:
 # 1️⃣ SYNC (only when requested)
 # -------------------------------------------------
   sync:
-    if: ${{ inputs.run_sync == 'Yes' || github.event_name == 'schedule' }}
+    if: ${{ (inputs.run_sync == 'Yes' || github.event_name == 'schedule') && github.event_name != 'push' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -98,7 +98,8 @@ jobs:
 # 2️⃣ DEPLOY (only if sync ran)
 # -------------------------------------------------
   deploy:
-    if: ${{ inputs.run_sync == 'Yes' || github.event_name == 'schedule' }}
+    
+    if: ${{ (inputs.run_sync == 'Yes' || github.event_name == 'schedule') && github.event_name != 'push' }}
     needs: sync
     runs-on: ubuntu-latest
 
