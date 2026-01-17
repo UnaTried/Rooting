@@ -39,7 +39,7 @@ jobs:
       - name: Checkout MMRL branch
         uses: actions/checkout@v4
         with:
-          ref: MMRL
+          ref: 'refs/heads/MMRL'
           fetch-depth: 0
           persist-credentials: true
 
@@ -62,8 +62,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git fetch origin MMRL
-          git pull origin MMRL
           mmrl-util sync --diff versions_diff.md
 
       - name: Write versions diff to summary
