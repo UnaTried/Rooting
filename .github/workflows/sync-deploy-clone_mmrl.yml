@@ -83,9 +83,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git fetch origin MMRL
-          git checkout MMRL
-          git rebase origin/MMRL || echo "Rebase failed; possibly no changes"
           mmrl-util index --push --branch MMRL || echo "No changes to push"
 
 
