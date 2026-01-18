@@ -9,7 +9,7 @@
   "description": "A list of modules and application UnaTried might be using.",
   "metadata": {
     "version": 1,
-    "timestamp": 1768270323.566852
+    "timestamp": 1768703281.402767
   },
   "modules": [
     {
@@ -29,6 +29,7 @@
       "features": {
         "post_fs_data": true
       },
+      "stars": 357,
       "track": {
         "type": "GIT",
         "added": null,
@@ -65,6 +66,7 @@
       "features": {
         "apks": true
       },
+      "stars": 10,
       "track": {
         "type": "ONLINE_ZIP",
         "added": null,
@@ -105,6 +107,7 @@
         "service": true,
         "post_fs_data": true
       },
+      "stars": 76,
       "track": {
         "type": "ONLINE_JSON",
         "added": null,
@@ -161,6 +164,7 @@
         "webroot": true,
         "apks": true
       },
+      "stars": 9256,
       "track": {
         "type": "ONLINE_JSON",
         "added": null,
@@ -190,6 +194,7 @@
       "added": 0,
       "timestamp": 1756522107.0,
       "size": 852186,
+      "stars": 298,
       "track": {
         "type": "ONLINE_JSON",
         "added": null,
@@ -230,6 +235,7 @@
         "sepolicy": true,
         "action": true
       },
+      "stars": 1319,
       "track": {
         "type": "ONLINE_JSON",
         "added": null,
@@ -269,6 +275,7 @@
         "webroot": true,
         "apks": true
       },
+      "stars": 8,
       "track": {
         "type": "ONLINE_ZIP",
         "added": null,
@@ -309,6 +316,7 @@
         "post_fs_data": true,
         "action": true
       },
+      "stars": 3660,
       "track": {
         "type": "ONLINE_JSON",
         "added": null,
@@ -338,6 +346,7 @@
       "added": 0,
       "timestamp": 1761236892.0,
       "size": 1819369,
+      "stars": 63,
       "track": {
         "type": "ONLINE_ZIP",
         "added": null,
@@ -379,6 +388,7 @@
         "resetprop": true,
         "sepolicy": true
       },
+      "stars": 21,
       "track": {
         "type": "ONLINE_ZIP",
         "added": null,
@@ -425,6 +435,7 @@
         "service": true,
         "post_fs_data": true
       },
+      "stars": 32,
       "track": {
         "type": "ONLINE_ZIP",
         "added": null,
@@ -464,6 +475,7 @@
         "resetprop": true,
         "action": true
       },
+      "stars": 29,
       "track": {
         "type": "ONLINE_JSON",
         "added": null,
@@ -493,6 +505,7 @@
       "added": 0,
       "timestamp": 1757117474.0,
       "size": 312578,
+      "stars": 139,
       "track": {
         "type": "ONLINE_JSON",
         "added": null,
@@ -549,6 +562,7 @@
         "post_fs_data": true,
         "action": true
       },
+      "stars": 2522,
       "track": {
         "type": "ONLINE_JSON",
         "added": null,
@@ -590,6 +604,7 @@
         "sepolicy": true,
         "apks": true
       },
+      "stars": 5027,
       "track": {
         "type": "ONLINE_JSON",
         "added": null,
@@ -631,6 +646,7 @@
         "sepolicy": true,
         "webroot": true
       },
+      "stars": 8344,
       "track": {
         "type": "ONLINE_ZIP",
         "added": null,
@@ -671,6 +687,7 @@
         "action": true,
         "webroot": true
       },
+      "stars": 342,
       "track": {
         "type": "ONLINE_ZIP",
         "added": null,
@@ -710,6 +727,7 @@
         "zygisk": true,
         "apks": true
       },
+      "stars": 53,
       "track": {
         "type": "ONLINE_ZIP",
         "added": null,
@@ -725,6 +743,42 @@
           "zipUrl": "https://rooting.unatried.com/MMRL/modules/iUnlockerGL/v1.1.5-r4_1001504.zip",
           "changelog": "",
           "size": 25969823
+        }
+      ]
+    },
+    {
+      "id": "meta-hybrid_mount",
+      "name": "Hybrid Mount",
+      "version": "v2.1.2",
+      "versionCode": 135,
+      "author": "Hybrid Mount Developers",
+      "description": "Waiting for daemon...",
+      "metamodule": "1",
+      "verified": false,
+      "added": 0,
+      "timestamp": 1768665482.0,
+      "size": 3845495,
+      "permissions": [
+        "kernelsu.permission.WEBUI"
+      ],
+      "features": {
+        "webroot": true
+      },
+      "track": {
+        "type": "ONLINE_JSON",
+        "added": null,
+        "source": "https://github.com/Hybrid-Mount/meta-hybris_mount",
+        "antifeatures": null,
+        "build_metadata": "https://rooting.unatried.com/MMRL/modules/meta-hybrid_mount/track.yaml"
+      },
+      "versions": [
+        {
+          "timestamp": 1768665482.0,
+          "version": "v2.1.2",
+          "versionCode": 135,
+          "zipUrl": "https://rooting.unatried.com/MMRL/modules/meta-hybrid_mount/v2.1.2_135.zip",
+          "changelog": "https://rooting.unatried.com/MMRL/modules/meta-hybrid_mount/v2.1.2_135.md",
+          "size": 3845495
         }
       ]
     },
@@ -747,6 +801,7 @@
         "service": true,
         "webroot": true
       },
+      "stars": 716,
       "track": {
         "type": "ONLINE_JSON",
         "added": null,
@@ -784,6 +839,7 @@
         "service": true,
         "post_fs_data": true
       },
+      "stars": 275,
       "track": {
         "type": "GIT",
         "added": null,
@@ -832,6 +888,7 @@
         "post_mount": true,
         "boot_completed": true
       },
+      "stars": 1959,
       "track": {
         "type": "ONLINE_JSON",
         "added": null,
