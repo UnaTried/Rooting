@@ -39,7 +39,7 @@ jobs:
       - name: Checkout MMRL branch
         uses: actions/checkout@v4
         with:
-          branch: MMRL
+          ref: MMRL
           fetch-depth: 0
           persist-credentials: true
 
