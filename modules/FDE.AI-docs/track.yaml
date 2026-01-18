@@ -1,4 +1,4 @@
 enable: true
 id: FDE.AI-docs
 source: https://github.com/feravolt/FDE.AI-docs
-update_to: https://raw.githubusercontent.com/feravolt/FDE.AI-docs/update.json
+update_to: https://raw.githubusercontent.com/feravolt/FDE.AI-docs/master/update.json
