@@ -91,6 +91,7 @@ jobs:
         run: |
           git add .
           git commit -m "Sync MMRL modules"
+          git pull --rebase MMRL
           mmrl-util index --push --branch MMRL
 
       - name: Upload logs
