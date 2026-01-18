@@ -90,12 +90,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          find . -type f -size +99M -printf '%P\n' |
-          while IFS= read -r file; do
+          find . -type f -size +99M -print0 |
+          while IFS= read -r -d '' file; do
             git lfs track "$file"
           done
+          find . -type f -size +99M -print0 |
+          xargs -0 git rm --cached || true
           git add .
-          git commit -m "Sync MMRL modules"
+          git commit -m "Sync MMRL modules" || echo "No changes to commit"
           git pull --rebase origin MMRL
           git push origin MMRL
 
