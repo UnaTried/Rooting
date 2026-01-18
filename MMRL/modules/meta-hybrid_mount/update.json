@@ -1,0 +1,14 @@
+{
+  "id": "meta-hybrid_mount",
+  "timestamp": 1768665482.0,
+  "versions": [
+    {
+      "timestamp": 1768665482.0,
+      "version": "v2.1.2",
+      "versionCode": 135,
+      "zipUrl": "https://rooting.unatried.com/MMRL/modules/meta-hybrid_mount/v2.1.2_135.zip",
+      "changelog": "https://rooting.unatried.com/MMRL/modules/meta-hybrid_mount/v2.1.2_135.md",
+      "size": 3845495
+    }
+  ]
+}
