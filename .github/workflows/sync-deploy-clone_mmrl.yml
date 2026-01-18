@@ -92,7 +92,7 @@ jobs:
           git add .
           git commit -m "Sync MMRL modules"
           git pull --rebase origin MMRL
-          mmrl-util index --push --branch MMRL
+          git push origin MMRL
 
       - name: Upload logs
         uses: actions/upload-artifact@v4
